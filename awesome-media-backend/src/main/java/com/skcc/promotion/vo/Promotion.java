@@ -28,6 +28,7 @@ public class Promotion {
 
 	@Override
 	public String toString() {
+		System.out.println(2);
 		return "Promotion [category=" + category + ", content=" + content + "]";
 	}
 

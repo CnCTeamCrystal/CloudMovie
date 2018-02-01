@@ -1,11 +1,10 @@
 package com.skcc.promotion.service;
 
-import java.util.List;
-
 import org.springframework.stereotype.Service;
 
+import com.skcc.content.vo.Contents;
 import com.skcc.promotion.dao.PromotionMapper;
-import com.skcc.promotion.vo.Promotion;
+
 
 @Service
 public class PromotionService {
@@ -16,8 +15,8 @@ public class PromotionService {
 		this.promotionMapper = promotionMapper;
 	}
 
-	public List<Promotion> getPromotions() {
-		return promotionMapper.selectPromotions();
+	public Contents getPromotionsByCategory() {
+		return promotionMapper.selectPromotionsByCategory();
 	}
 
 

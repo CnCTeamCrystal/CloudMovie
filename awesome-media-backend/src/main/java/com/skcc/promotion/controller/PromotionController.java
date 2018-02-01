@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.skcc.content.vo.Contents;
 import com.skcc.promotion.service.PromotionService;
 import com.skcc.promotion.vo.Promotion;
 
@@ -15,8 +16,9 @@ public class PromotionController {
 	private PromotionService promotionService;
 	
 	@RequestMapping(path="/v1/promotions", method=RequestMethod.GET)
-	public List<Promotion> getPromotions() {
-		return promotionService.getPromotions();
+	public Contents getPromotions() {
+
+		return promotionService.getPromotionsByCategory();
 	}
 
 }
