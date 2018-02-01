@@ -2,33 +2,35 @@ package com.skcc.promotion.vo;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.skcc.content.vo.Categories;
+import com.skcc.content.vo.Contents;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Promotion {
 
-	public String category;
+	public Categories category;
 
-	public int content;
+	public Contents content;
 
-	public String getCategory() {
+	public Categories getCategory() {
 		return category;
 	}
 
-	public void setCategory(String category) {
+	public void setCategory(Categories category) {
 		this.category = category;
 	}
 
-	public int getContent() {
+	public Contents getContent() {
 		return content;
 	}
 
-	public void setContent(int content) {
+	public void setContent(Contents content) {
 		this.content = content;
 	}
 
 	@Override
 	public String toString() {
-		System.out.println(2);
+		System.out.println(4);
 		return "Promotion [category=" + category + ", content=" + content + "]";
 	}
 

@@ -2,6 +2,7 @@ package com.skcc.promotion.controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,11 +14,11 @@ import com.skcc.promotion.vo.Promotion;
 @RestController
 public class PromotionController {
 	
+	@Autowired
 	private PromotionService promotionService;
 	
 	@RequestMapping(path="/v1/promotions", method=RequestMethod.GET)
 	public Contents getPromotions() {
-
 		return promotionService.getPromotionsByCategory();
 	}
 

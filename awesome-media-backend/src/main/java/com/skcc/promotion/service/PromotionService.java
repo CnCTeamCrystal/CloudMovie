@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import com.skcc.content.vo.Contents;
 import com.skcc.promotion.dao.PromotionMapper;
 
-
 @Service
 public class PromotionService {
 
@@ -16,8 +15,8 @@ public class PromotionService {
 	}
 
 	public Contents getPromotionsByCategory() {
+		
 		return promotionMapper.selectPromotionsByCategory();
 	}
-
 
 }
