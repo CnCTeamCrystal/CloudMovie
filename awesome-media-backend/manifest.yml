@@ -1,0 +1,11 @@
+applications:
+- name: awesome-media-backend-06
+  memory: 1G
+  instances: 1
+  random-route: true
+  buildpack: java_buildpack
+  path: ./target/awesome-media-backend-0.0.1-SNAPSHOT.jar
+  env:
+    SPRING_PROFILES_ACTIVE: dev
+  services:
+    - awesome-media-db-06
